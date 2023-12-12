@@ -3,7 +3,7 @@ class ProductManager {
 
   create(data) {
     if (!(data.title && data.photo && data.price && data.stock)) {
-      return "Los campos title, photo, price, stock son obligatorios";
+      return "Los campos son obligatorios";
     }
 
     const id = ProductManager.#products.reduce((maxId, product) => Math.max(maxId, product.id), 0) + 1;
